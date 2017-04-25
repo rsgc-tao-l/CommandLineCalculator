@@ -29,7 +29,6 @@ var selection = helperOne.getIntegerInput(with: "What is your selection? ",
 
 // Perform the appropriate calculation based on the user's choice
 var myCalculator = Calculator()
-var result = 0.0
 if selection == 1 {
     
     // Get the input
@@ -37,15 +36,33 @@ if selection == 1 {
     var y = helperOne.getDoubleInput(with: "What is the second value? ")
     
     // Determine the result
-    result = myCalculator.add(this: x, that: y)
+    print("Result is " + String(myCalculator.add(this: x, that: y)) )
     
 } else if selection == 2 {
     
+    // Get the input
+    var x = helperOne.getDoubleInput(with: "What is the first value? ")
+    var y = helperOne.getDoubleInput(with: "What is the second value? ")
+    
+    // Determine the result
+    print("Result is " + String(myCalculator.minus(this: x, that: y)) )
+    
+    
+} else if selection == 3 {
+    // Get the input
+    var x = helperOne.getDoubleInput(with: "What is the first value? ")
+    var y = helperOne.getDoubleInput(with: "What is the second value? ")
+    
+    // Determine the result
+    print("Result is " + String(myCalculator.multiply(this: x, that: y)) )
+} else if selection == 4{
+    // Get the input
+    var x = helperOne.getDoubleInput(with: "What is the first value? ")
+    var y = helperOne.getDoubleInput(with: "What is the second value? ")
+    
+    // Determine the result
+    print("Result is " + String(myCalculator.divide(this: x, that: y)) )
 }
-
-// Print the result
-print("Result is \(result)")
-
 
 
 
