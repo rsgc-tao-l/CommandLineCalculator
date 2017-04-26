@@ -9,8 +9,9 @@ func printCalculatorMenu() {
     print("2 - Subtract")
     print("3 - Multiply")
     print("4 - Divide")
-    print("5 - Quit program")
-    print("")
+    print("5 - Exponents")
+    print("6 - Quit program")
+    print("Ola")
 }
 
 // Create an instance of the CommandLineHelper class.
@@ -25,7 +26,7 @@ printCalculatorMenu()
 // Ask the user for their choice
 var selection = helperOne.getIntegerInput(with: "What is your selection? ",
                                           lowerBoundary: 1,
-                                          upperBoundary: 5)
+                                          upperBoundary: 6)
 
 // Perform the appropriate calculation based on the user's choice
 var myCalculator = Calculator()
@@ -38,6 +39,7 @@ if selection == 1 {
     // Determine the result
     print("Result is " + String(myCalculator.add(this: x, that: y)) )
     
+    
 } else if selection == 2 {
     
     // Get the input
@@ -48,13 +50,14 @@ if selection == 1 {
     print("Result is " + String(myCalculator.minus(this: x, that: y)) )
     
     
+    
 } else if selection == 3 {
     // Get the input
     var x = helperOne.getDoubleInput(with: "What is the first value? ")
     var y = helperOne.getDoubleInput(with: "What is the second value? ")
-    
     // Determine the result
     print("Result is " + String(myCalculator.multiply(this: x, that: y)) )
+    
 } else if selection == 4{
     // Get the input
     var x = helperOne.getDoubleInput(with: "What is the first value? ")
@@ -62,6 +65,13 @@ if selection == 1 {
     
     // Determine the result
     print("Result is " + String(myCalculator.divide(this: x, that: y)) )
+    
+} else if selection == 5{
+    var x = helperOne.getDoubleInput(with: "your base")
+    var y = helperOne.getDoubleInput(with: "your exponent")
+    print("Result is " + String(myCalculator.Exponents(this: x, that: y)) )
+    
+    
 }
 
 
